@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.min.css" />
+    <title>Budget App Light</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Budget App Light</h1>
+      </header>
+
+      <main>
+        <!-- input block -->
+        <div class="incomes box fadeIn">
+          <h2>Incomes</h2>
+          <input
+            id="income"
+            class="input"
+            type="text"
+            placeholder="Input your income"
+            onblur="checkNum()"
+          />
+        </div>
+
+        <!-- expences block -->
+        <div class="expences box fadeIn">
+          <h2>Expences</h2>
+          <div class="buttons-group"></div>
+          <div class="inputs-group"></div>
+          <p class="explain-check">* use checkbox for one week expence</p>
+          <button class="btn btn-count" onclick="countBudget()">Count</button>
+          <button class="btn btn-clear" onclick="clearAll()">Clear</button>
+        </div>
+
+        <!-- result block -->
+        <div class="box fadeIn">
+          <h2>Result</h2>
+          <div class="result"></div>
+        </div>
+      </main>
+
+      <footer>
+        All rights reserved by Pavel Belkin © 2020
+      </footer>
+    </div>
+
+    <script src="/src/main.js"></script>
+  </body>
+</html>
