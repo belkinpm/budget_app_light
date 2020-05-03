@@ -13,30 +13,32 @@
       </header>
 
       <main>
-        <!-- input block -->
-        <div class="incomes box fadeIn">
-          <h2>Incomes</h2>
-          <input
-            id="income"
-            class="input"
-            type="text"
-            placeholder="Input your income"
-            onblur="checkNum()"
-          />
-        </div>
+        <form action="">
+          <!-- input block -->
+          <div class="incomes box fadeIn">
+            <h2>Incomes</h2>
+            <input
+              id="income"
+              class="input"
+              type="text"
+              placeholder="Input your income"
+              onblur="dataCollector()"
+            />
+          </div>
 
-        <!-- expences block -->
-        <div class="expences box fadeIn">
-          <h2>Expences</h2>
-          <div class="buttons-group"></div>
-          <div class="inputs-group"></div>
-          <p class="explain-check">* use checkbox for one week expence</p>
-          <button class="btn btn-count" onclick="countBudget()">Count</button>
-          <button class="btn btn-clear" onclick="clearAll()">Clear</button>
-        </div>
+          <!-- expences block -->
+          <div class="expences box fadeIn">
+            <h2>Expences</h2>
+            <div class="buttons-group"></div>
+            <div class="inputs-group"></div>
+            <p class="explain-check">* use checkbox for one week expence</p>
+            <button type="button" class="btn btn-count" onclick="countBudget()">Count</button>
+            <button type="reset" class="btn btn-clear" onclick="clearAll()">Clear</button>
+          </div>
+        </form>
 
         <!-- result block -->
-        <div class="box fadeIn">
+        <div class="box fadeIn" id="result">
           <h2>Result</h2>
           <div class="result"></div>
         </div>

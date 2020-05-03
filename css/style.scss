@@ -65,8 +65,46 @@ input {
   padding-left: 0.5rem;
 }
 
-.check {
-  margin: 0 0.25rem;
+.switch-wrap {
+  background: $light-grey;
+  padding: 2px;
+  margin: 0.5rem 0.25rem;
+  width: 20px;
+  height: 10px;
+  border-radius: 7px;
+
+  .check {
+    cursor: pointer;
+    position: absolute;
+    opacity: 0;
+    width: 20px;
+    height: 10px;
+  }
+}
+
+.switch {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 0fr 1fr 1fr;
+  transition: .2s;
+
+  &::after {
+    content: '';
+    border-radius: 50%;
+    background: #ffffff;
+    grid-column: 2;
+    transition: background .2s;
+  }
+}
+
+.check:checked {
+  + .switch {
+    grid-template-columns: 1fr 1fr 0fr;
+
+    &::after {
+      background-color: $dark-grey;
+    }
+  }
 }
 
 button {
